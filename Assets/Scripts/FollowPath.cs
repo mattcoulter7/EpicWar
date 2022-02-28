@@ -7,6 +7,7 @@ public class FollowPath : MonoBehaviour
     public List<Transform> path = new List<Transform>();
     public float speed = 10f;
     public Vector3 com;
+    public bool following = true;
     private Rigidbody _rb;
     private int _activeNoteIndex = 0;
     // Start is called before the first frame update
@@ -21,11 +22,9 @@ public class FollowPath : MonoBehaviour
             path.Add(t);
         }
     }
-
     private Transform GetCurrentNode(){
         return path[_activeNoteIndex];
     }
-
     private bool NodeReached(Transform node){
         Vector3 toNode = node.position - transform.position;
         return toNode.magnitude < 4;
@@ -34,6 +33,7 @@ public class FollowPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!following) return;
         if (path.Count == 0) return;
 
         Transform node = GetCurrentNode();

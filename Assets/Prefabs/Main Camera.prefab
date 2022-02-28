@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6a9faa0f3aaf345915d7a1bc3a967e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 3
+  interval: 1
   spawnPrefab: {fileID: 664687677934384157, guid: fc877a4347bfa394c93cc1e93ef7e46e, type: 3}
   spawnPosition: {fileID: 0}
 --- !u!114 &7803265223362554277
@@ -132,5 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a42c0aa9ae9f8d43bbba115d29c55e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderPositions:
-  - {fileID: 0}
+  cameraReferences: []
+  startCamera: {fileID: 0}
+  stepSize: 0.05
+  stopAtEnds: 0
+  startT: 0

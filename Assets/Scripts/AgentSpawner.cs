@@ -9,6 +9,8 @@ public class AgentSpawner : MonoBehaviour
     public Transform spawnPosition;
     private float _nextActionTime = 0.0f;
     private PathController _pc;
+    private List<GameObject> _usedAgents = new List<GameObject>();
+    private List<GameObject> _pooledAgents = new List<GameObject>();
     
     void Start(){
         _pc = Camera.main.GetComponent<PathController>();
